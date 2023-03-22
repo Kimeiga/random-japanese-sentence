@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Furigana and Definitions</title>
+	<style>
+		ruby {
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		ruby>rt {
+			font-size: 0.5em;
+		}
+
+		ruby>span::before {
+			content: attr(data-definition);
+			display: block;
+			font-size: 0.5em;
+		}
+
+		ruby>span {
+			order: 2;
+		}
+	</style>
+</head>
+
+<body>
+	<p>
+		<ruby><span data-definition="you">君</span><rt>きみ</rt></ruby><ruby><span data-definition="of">の</span></ruby><ruby><span data-definition="success">成功</span><rt>せいこう</rt></ruby><ruby><span data-definition="topic marker">は</span></ruby><ruby><span data-definition="hardworking">一生懸命</span><rt>いっしょうけんめい</rt></ruby><ruby><span data-definition="study">勉強</span><rt>べんきょう</rt></ruby><ruby><span data-definition="did">した</span></ruby><ruby><span data-definition="period">。</span></ruby></p>
+	<p>君の成功は一生懸命勉強した。</p>
+	<ruby><span>君</span>
+		<rt>きみ</rt>
+	</ruby>
+	<ruby><span>の</span></ruby>
+	<ruby><span>成功</span>
+		<rt>せいこう</rt>
+	</ruby>
+	<ruby>
+		<spanmarker">は</span>
+	</ruby>
+	<ruby><span>一生懸命</span>
+		<rt>いっしょうけんめい</rt>
+	</ruby>
+	<ruby>勉強<rt>べんきょう</rt>
+	</ruby>した
+	<ruby><span>。</span></ruby>
+
+	<ruby>眠<rt>ねむ</rt></ruby>すぎて<ruby>倒<rt>たお</rt></ruby><span>れそう。</span>
+</body>
+
+</html>
